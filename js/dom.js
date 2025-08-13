@@ -18,3 +18,8 @@ li3.innerText = 'Kacchi';
 ul.appendChild(li3)
 
 foodContainer.appendChild(ul)
+
+const makeGreen =  document.getElementById('make-green');
+makeGreen.addEventListener('click', function(){
+    document.body.style.backgroundColor='green';
+})
