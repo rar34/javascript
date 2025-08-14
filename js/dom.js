@@ -23,3 +23,10 @@ const makeGreen =  document.getElementById('make-green');
 makeGreen.addEventListener('click', function(){
     document.body.style.backgroundColor='green';
 })
+
+const white = document.getElementById('make-white');
+white.onclick = makeWhite;
+
+function makeWhite(){
+    document.body.style.backgroundColor="white"
+}
