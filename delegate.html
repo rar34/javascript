@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+<body>
+    <h1>Explore delegate</h1>
+    <ul id="ul-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Dolor, quo debitis.</li>
+        <li class="item">Fugiat, recusandae architecto?</li>
+        <li class="item">Doloremque, aliquid aut.</li>
+        <li class="item">Explicabo, quasi voluptas?</li>
+        <li class="item">In, atque beatae?</li>
+    </ul>
+
+    <div>
+        <input type="text" name="" id="input-field">
+        <button id="btn-add">Add</button>
+    </div>
+
+    <script>
+        const items = document.getElementsByClassName('item');
+        for(const item of items){
+            item.addEventListener('click', function(e){
+                e.target.parentNode.removeChild(e.target)
+            })
+        }
+
+        document.getElementById('btn-add').addEventListener('click', function(){
+            const ulContainer = document.getElementById('ul-container');
+            
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            
+            const li = document.createElement('li');
+            li.innerText = inputText;
+            li.classList.add('item');
+            ulContainer.appendChild(li)
+            inputField.value = '';
+        })
+    </script>
+</body>
+</html>
